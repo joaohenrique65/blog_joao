@@ -12,6 +12,12 @@
       padding: 0;
       box-sizing: border-box;
    }
+
+   header {
+     background-color: black;
+     min-height: 150px;
+   }
+
    .container {
       position: relative;
       top:0px;
@@ -25,24 +31,35 @@
      
    }
  
-   .pousadas,.areas {
-      display: flex;
-      flex-direction: row ;
-      flex-wrap: wrap;
-      flex-grow: 2;
-      justify-content: center;
-      gap:10px;
+   img {
+     position: relative;
+     float:left;
+     margin:10px;
    }
 
+  footer {
+
+    position: relative;
+    top:100px;
+    background-color: black;
+    height: 150px;
+  }
+
+
+   
   </style>
 </head>
 <body>
+
+ <header>
+
+ </header>
 <div class="container">
   <section class="hero">
     <h1>Neste Blog irei falar de viagens</h1>
     <p>Os principais desafios a ser planejar uma viagem</p>
     <figure>
-      <img src="slide2.PNG" width="800px" >
+      <img src="slide2.PNG"  >
       <figcaption>Uma viagem muito louca</figcaption>
     </figure>
   <section>
@@ -65,7 +82,9 @@
       
   </section>
 </div> 
+<footer>
 
+</footer>
 
 </body>
 </html>
