@@ -1,90 +1,304 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog do Joao</title>
-  <style>
-    
-   * {
-      margin: 0;
-      border:0;
-      padding: 0;
-      box-sizing: border-box;
-   }
-
-   header {
-     background-color: black;
-     min-height: 150px;
-   }
-
-   .container {
-      position: relative;
-      top:0px;
-      margin:auto;
-   }
-
-   .hero {
-      display: flex;
-      flex-direction: column ;
-      flex-wrap: nowrap;
-     
-   }
- 
-   img {
-     position: relative;
-     float:left;
-     margin:10px;
-   }
-
-  footer {
-
-    position: relative;
-    top:100px;
-    background-color: black;
-    height: 150px;
-  }
-
-
-   
-  </style>
-</head>
-<body>
-
- <header>
-
- </header>
-<div class="container">
-  <section class="hero">
-    <h1>Neste Blog irei falar de viagens</h1>
-    <p>Os principais desafios a ser planejar uma viagem</p>
-    <figure>
-      <img src="slide2.PNG"  >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog do Joaozinho</title>
+    <style>
       
-    </figure>
-  <section>
+      * {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        box-sizing: border-box;
+      }
 
-  <section class="pousadas">  
-     
-      <img src="pousada.png" />
-      
-      <div class="areas">
+
+      body {
+         background-color: #388D80;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4rem;
+        z-index: 10;
+        font-size: 1.5em;
+        background-color: white;
+        border-bottom: 1px solid black;
+      }
+
+      .container_central {
+       
+        margin: 0 auto;
+      }
+
+      .flex_behind {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      ul {
+        padding: 20px;
         
-        <img src="https://www.kayak.com.br/rimg/kimg/1c/fa/dc603475-59de1a2b.jpg?width=968&height=607&crop=true" height="150px" width="150px"/>
+      }
 
-        <img src="https://www.kayak.com.br/rimg/himg/48/26/0f/expediav2-343323-8b5e10-525268.jpg?width=968&height=607&crop=true" height="150px" width="150px" />
+      ul li {
+        display: inline;
+        margin-right: 10px;
+        color: orange;
+      }
 
-        <img src="cafe.png" height="150px" width="150px"/>
-        <img src="restaurante.png"  height="150px" width="150px" />
+      .logo {
+        width: 30%;
+        display: flex;
+        padding: 10px;
+      }
 
-        <time datetime="2024-09-04 15:30">
-      </div>
+      .logo span {
+        margin-left: 10px;
+        margin-top: 6px;
+      }
+
+
+      .post_passeio {
+         display: flex;
+         flex-direction: row;
+         flex-wrap:wrap;
+         padding:0px 20px;
+         background-color: #FCFCFC;
+         gap:15px;
+         padding: 20px;
+
+      }
+
+ 
+
+      .pontos_turisticos {
+        
+         min-height: 400px;
+         width: 450px;
+         color: #303030;
+         font-family: Lato;
+         font-size: 17px;
+         line-height: 1.5;
+         padding: 10px;
+         border: 1px solid black;
+        
+      }
+
       
-  </section>
-</div> 
-<footer>
+      .pontos_turisticos p, h2 {
+         margin-bottom: 15px;
+      }
 
-</footer>
+      hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 0;
+        border-top: 1px solid #F92664;
+        
+      
+      }
+      
+      .hero {
+         
+        background-image: url("arraial.jpg");
+        background-size: cover;
+         width: 100%;
+         height: 700px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         border-bottom: 1px solid black;
+      }
 
-</body>
+       .viajando {
+        
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        background-color: #FF8000;
+        justify-content: first baseline;
+        align-items: flex-start;
+        border-bottom: 1px solid black;
+        
+        
+      }
+
+      .viajando p, .viajando h2 {
+         margin-top:50px;
+         width: 700px;
+         margin-left: 50px;
+         font-size: 38px;
+         color:#fff;
+         line-height: 1.2;
+      }
+
+      
+
+      .hero p {
+         margin-top:50px;
+         font-size: 64px;
+         box-shadow: inset;
+         line-height: 1.2;
+         color:#FFF;
+      }
+
+      .hero h2 {
+         margin-top:50px;
+         font-size: 36px;
+         box-shadow: inset;
+         line-height: 1.2;
+         color:#FFF;
+         
+      }
+      .hero a {
+         padding: 20px;
+         border-radius: 15px;
+         font-weight: 700px;
+         color: white;
+         background-color: orange;
+         border: 1px solid white;
+         font-size: 1.5em;
+         text-decoration: none;
+      }
+
+
+    footer {
+      
+      border-top: 1px solid #F92664;
+      width: 100%;
+      min-height: 300px;
+      background-color: #1D2B34;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container_central" >
+        <header>
+            <div class="flex_behind">
+              <div class="logo">
+                <img src="blog.png" height="30px" />
+                <span>Blog Joaozinho</span>
+              </div>
+              <nav>
+                <ul>
+                  <li>Fazer Login</li>
+                  <li>Criar Post</li>
+                </ul>
+              </nav>
+            </div>
+        </header>
+
+        <main>
+            <session class="hero">
+                <p>Publique sobre o que você adora, do seu jeito</p>
+                <h2>Crie um blog lindo e exclusivo facilmente.</h2>
+                <a href="#">Curta a Vida</a>
+            </session> 
+            
+            <session class="viajando" >
+              
+              <div style="width: 100%;">
+                <h2>Escolha a viagem perfeita</h2>
+                <p>Prepare as malas, largue tudo que esta fazendo e vamos curtir a vida, um momento inesquecível para 
+                se lembrar para  sempre.</p>
+              </div>
+           
+            </session>
+
+            <session class="post_passeio">
+                  
+              <div class="pontos_turisticos">
+                 
+                <h2>01. Escadaria das Prainhas do Pontal do Atalaia</h2>
+                  <p>
+                    Esse certamente é o lugar mais badalado para tirar fotos em Arraial do Cabo! A escadaria que dá acesso às Prainhas do Pontal do Atalaia parece um caminho de acesso ao paraíso, não acham?</p>
+                  
+                  <p>
+                    Durante o verão, será difícil encontrar essa escada vazia e tranquila para fazer uma foto sem ninguém. Você terá que trabalhar sua paciência e aguardar uma janela de tempo que não esteja passando ninguém para poder realizar sua foto… A fim de encontrá-la mais vazia, opte por visitá-la em dias de semana.
+                  </p>
+
+                  <figure>
+                    <img src="https://www.maladeaventuras.com/wp-content/uploads/2020/08/prainhas-arraial-do-cabo.jpg" width="430px;" />
+                    <figcaption>
+                        Praia do Pontal 
+                    </figcaption>
+                  </figure>
+                  <hr/>   
+                </div>
+
+                <div class="pontos_turisticos">
+                  <h2>02. Debaixo d’água nas Prainhas do Pontal do Atalaia</h2>
+                  <p>
+                    “Cada mergulho é um flash!”. Essa frase não poderia ser mais bem empregada do que nestas praias. A água é super clarinha e perfeita para você sereiar, fazer poses divertidas ou tirar fotos do jeito que você bem entender.</p>
+                  
+                  <p>
+                    Se você tiver uma GoPro, ótimo. Se não tiver, recomendo investir em uma capa a prova d’água para o seu celular. Veja aqui a nossa escolha de capinha para celular.
+                  </p>
+
+                  <figure>
+                    <img src="https://www.maladeaventuras.com/wp-content/uploads/2021/01/foto-agua-arraial-do-cabo.jpg" width="430px;" />
+                    <figcaption>
+                      Olha que efeito legal na foto usando uma GoPro + Dome
+                    </figcaption>
+                  </figure>
+
+                  <p>Aliás, fizemos este passeio, que passou por lugares lindos e rendeu fotos muito bonitas. O dia estava incrível: céu muito azul, sol e mar transparente!</p>
+                  <hr/>   
+                </div>
+
+                <div class="pontos_turisticos">
+                  <h2>3. Mirante da Praia Grande</h2>
+                  <p>
+                    Um belo lugar para tirar fotos de Arraial do Cabo é Praia Grande, especialmente no horário do por do sol! Quando chega o fim do dia, o céu fica todo colorido com as mais diversas cores.</p>
+                  
+                  <p>
+                    E se você quiser assistir a este espetáculo no conforto da sacada do seu hotel, recomendo a Pousada Acuário. Já me hospedei lá e achei um ótimo custo x benefício. Ela é simples, porém super bem localizada.
+                  </p>
+                  <figure>
+
+                    <img src="https://www.maladeaventuras.com/wp-content/uploads/2019/03/o-que-fazer-em-arraial-do-cabo-vista.jpg" width="430px;" />
+                    <figcaption>
+                      Praia Grande em Arraial do Cabo
+                    </figcaption>
+
+                  </figure>
+                  
+                  <p>Uma alternativa para quem quer ficar beeem relax e longe de qualquer aglomeração na hora do por do sol é buscar as dunas que ficam mais afastadas na sequência da praia.</p>
+                  <p>Outra dica legal é fazer este tour da Civitatis: ao fazer esta trilha, você passa por alguns mirantes e assim já garante belas fotos, 
+                    com um guia te acompanhando no percurso.</p>
+                  <hr/>   
+                </div>
+
+                <div class="pontos_turisticos">
+                  <h2>4.Pôr do sol no Mirante para a Ilha dos Franceses</h2>
+                  <p>
+                    Por fim, aqui vai mais uma dica de lugar para assistir ao por do sol em Arraial do Cabo, o Mirante para a Ilha dos Franceses. Como esse lugar é pouquíssimo conhecido, é provável que você encontre a paisagem só para você – diferentemente do Pontal do Atalaia, que é o local mais conhecido para assistir ao pôr do sol na cidade.</p>
+                  
+                  <p>
+                    O local fica próximo da Janela do Paraíso e do Deck dos Pescadores. Basta seguir a trilhazinha até o alto do morro e aguardar o entardecer. A caminhada não levará mais que 10 minutos a partir da construção abandonada.
+                  </p>
+
+                  <figure>
+                    <img src="https://www.maladeaventuras.com/wp-content/uploads/2021/01/foto-por-do-sol-arraial-do-cabo.jpg" width="430px;" />
+                    <figcaption>
+                        Praia do Pontal 
+                    </figcaption>
+                  </figure>
+
+                  <hr/>   
+                </div>
+            </session>
+
+        </main>
+
+        <footer></footer>
+  </div>
+  </body>
 </html>
