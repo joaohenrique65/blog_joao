@@ -22,7 +22,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 99vw;
         height: 4rem;
         z-index: 10;
         font-size: 1.5em;
@@ -52,12 +52,14 @@
       }
 
       .logo {
-        width: 30%;
+        width: 30vw;
         display: flex;
         padding: 10px;
+        font-size: 1.5em;
       }
 
       .logo span {
+        
         margin-left: 10px;
         margin-top: 6px;
       }
@@ -66,11 +68,12 @@
       .post_passeio {
          display: flex;
          flex-direction: row;
+         width: 99vw;
          flex-wrap:wrap;
          padding:0px 20px;
          background-color: #FCFCFC;
          gap:15px;
-         padding: 20px;
+         padding: 14px;
 
       }
 
@@ -79,7 +82,7 @@
       .pontos_turisticos {
         
          min-height: 400px;
-         width: 450px;
+         width: 400px;
          color: #303030;
          font-family: Lato;
          font-size: 17px;
@@ -107,7 +110,7 @@
          
         background-image: url("arraial.jpg");
         background-size: cover;
-         width: 100%;
+         width: 99vw;
          height: 700px;
          display: flex;
          flex-direction: column;
@@ -118,7 +121,7 @@
 
        .viajando {
         
-        width: 100%;
+        width: 99vw;
         height: 500px;
         display: flex;
         flex-direction: row;
@@ -132,7 +135,7 @@
 
       .viajando p, .viajando h2 {
          margin-top:50px;
-         width: 700px;
+         width: 45vw;
          margin-left: 50px;
          font-size: 38px;
          color:#fff;
@@ -143,7 +146,7 @@
 
       .hero p {
          margin-top:50px;
-         font-size: 64px;
+         font-size: 3.5em;
          box-shadow: inset;
          line-height: 1.2;
          color:#FFF;
@@ -172,11 +175,60 @@
     footer {
       
       border-top: 1px solid #F92664;
-      width: 100%;
+      width: 99vw;
       min-height: 300px;
       background-color: #1D2B34;
     }
+
+
+    @media (min-width: 300px) {
+
+      .logo {
+        width: 30vw;
+        display: flex;
+        padding: 10px;
+        font-size: 0.8em;
+        
+        
+      }
+
+      .viajando p, .viajando h2 {
+         margin-top:50px;
+         width: 45vw;
+         margin-left: 50px;
+         font-size: 1.5em;
+         color:#fff;
+         line-height: 1.2;
+      }
+
+      .hero p {
+         margin-top:50px;
+         margin-left: 20px;
+         font-size: 1.5em;
+         box-shadow: inset;
+         line-height: 1.2;
+         color:#FFF;
+      }
+
+      .hero h2 {
+         margin-top:50px;
+         margin-right: 10px;
+         font-size: 1em;
+         box-shadow: inset;
+         line-height: 1.2;
+         color:#FFF;
+         
+      }
+
+      img {
+        width: 85vw;
+      }
+    }
     </style>
+
+   
+
+   
   </head>
   <body>
     <div class="container_central" >
