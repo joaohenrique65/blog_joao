@@ -11,9 +11,12 @@ input {
 
 fieldset legend {
   border: 1px solid black;
-  color: coral;
+  color: rgb(20, 109, 226);
 }
 
 input[type="button"] {
-  background-color: coral;
+  background-color: rgb(20, 109, 226);
+  color: aliceblue;
+  font-size: 14px;
+  font-weight: 600;
 }
