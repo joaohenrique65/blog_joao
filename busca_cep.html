@@ -1,0 +1,56 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta de CEP</title>
+    <link rel="stylesheet" href="cadastro.css" />
+  </head>
+  <body>
+    <h1>Consulta de Endereço</h1>
+    <form id="form-cep">
+      <fieldset>
+        <legend>Cadastro pessoa:</legend>
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" />
+        <br />
+        <label for="logradouro">Logradouro:</label>
+        <input type="text" id="logradouro" name="logradouro" readonly />
+        <br />
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" readonly />
+        <br />
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" readonly />
+        <br />
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" readonly />
+        <input
+          type="button"
+          value="consultar"
+          onclick="consultarCEP(cep.value)"
+        />
+      </fieldset>
+    </form>
+
+    <script>
+      function consultarCEP(cep) {
+        alert(cep);
+        if (cep.length === 8) {
+          // Verifica se o CEP tem 8 dígitos
+          fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then((response) => response.json())
+            .then((data) => preencherCampos(data))
+            .catch((error) => console.error("Erro:", error));
+        }
+      }
+
+      function preencherCampos(dados) {
+        alert("preencherCampos");
+        document.getElementById("logradouro").value = dados.logradouro || "";
+        document.getElementById("bairro").value = dados.bairro || "";
+        document.getElementById("cidade").value = dados.localidade || "";
+        document.getElementById("estado").value = dados.uf || "";
+      }
+    </script>
+  </body>
+</html>
