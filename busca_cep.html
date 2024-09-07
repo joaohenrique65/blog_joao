@@ -7,9 +7,9 @@
   </head>
   <body>
     <form id="form-cep">
-      <h1>Cadastro de Cliente</h1>
+      <h1>Cadastro de Cliente</h1> Tempo Resposta <span class="cronometro">00:00</span>
       <fieldset>
-        <legend>Cadastro pessoa:</legend>
+        <legend>Cadastro pessoa:</legend> 
         <label for="Nome">Nome:</label>
         <input type="text" id="nome" name="nome" />
         <br />
@@ -45,10 +45,23 @@
     </form>
 
     <script>
+
+      var tempo = 0;
+      var myInterval;
+      
+      function cronometro () {
+        tempo += 1;
+        elemento = document.getElementsByClassName("cronometro");
+        elemento[0].innerHTML =  tempo + 'milesegundo';
+      }
+      
+      
       function consultarCEP(cep) {
         alert(cep);
+        
         if (cep.length === 8) {
           // Verifica se o CEP tem 8 dígitos
+          myInterval = setInterval(cronometro, 2)
           fetch(`https://viacep.com.br/ws/${cep}/json/`)
             .then((response) => {
               return response.json();
@@ -58,6 +71,7 @@
             })
             .catch((error) => console.error("Erro:", error));
         }
+        
       }
 
       function preencherCampos(dados) {
@@ -66,7 +80,11 @@
         document.getElementById("bairro").value = dados.bairro || "";
         document.getElementById("cidade").value = dados.localidade || "";
         document.getElementById("estado").value = dados.uf || "";
+
+        clearInterval(myInterval);
       }
+
+      
     </script>
   </body>
 </html>
