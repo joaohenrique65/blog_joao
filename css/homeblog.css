@@ -1,0 +1,276 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+  }
+
+  body {
+     background-color: #388D80;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99vw;
+    height: 4rem;
+    z-index: 10;
+    font-size: 1.5em;
+    background-color: white;
+    border-bottom: 1px solid black;
+  }
+
+  .container_central {
+   
+    margin: 0 auto;
+  }
+
+  .flex_behind {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    padding: 20px;
+    
+  }
+
+  ul li {
+    display: inline;
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: orange;
+  }
+
+  .logo {
+    width: 30vw;
+    display: flex;
+    padding: 10px;
+  }
+
+  .logo span {
+    margin-left: 10px;
+    margin-top: 6px;
+  }
+
+
+  .post_passeio {
+     display: flex;
+     flex-direction: row;
+     width: 99vw;
+     flex-wrap:wrap;
+     padding:0px 20px;
+     background-color: #FCFCFC;
+     gap:15px;
+     padding: 14px;
+
+  }
+
+  .pontos_turisticos {
+    
+     min-height: 400px;
+     width: 450px;
+     color: #303030;
+     font-family: Lato;
+     font-size: 17px;
+     line-height: 1.5;
+     padding: 10px;
+     border: 1px solid black;
+    
+  }
+
+  .pontos_turisticos p, h2 {
+     margin-bottom: 15px;
+  }
+
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #F92664;
+  }
+  
+  .hero {
+     
+    background-image: url("../arraial.jpg");
+    background-size: cover;
+     width: 99vw;
+     height: 700px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border-bottom: 1px solid black;
+  }
+
+   .viajando {
+    
+    width: 99vw;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    background-color: #FF8000;
+    justify-content: first baseline;
+    align-items: flex-start;
+    border-bottom: 1px solid black;
+    
+    
+  }
+
+  .viajando p, .viajando h2 {
+     margin-top:50px;
+     width: 45vw;
+     margin-left: 50px;
+     font-size: 1.8em;
+     color:#fff;
+     line-height: 1.2;
+  }
+
+  
+
+  .hero p {
+     margin-top:50px;
+     font-size: 3.5em;
+     box-shadow: inset;
+     line-height: 1.2;
+     color:#FFF;
+  }
+
+  .hero h2 {
+     margin-top:50px;
+     font-size: 36px;
+     box-shadow: inset;
+     line-height: 1.2;
+     color:#FFF;
+     
+  }
+  .hero a {
+     padding: 20px;
+     border-radius: 15px;
+     font-weight: 700px;
+     color: white;
+     background-color: orange;
+     border: 1px solid white;
+     font-size: 1.5em;
+     text-decoration: none;
+  }
+
+
+  button {
+    background-color:#388D80;
+    font-size: 20px;
+    width:150px;
+    color:#FCFCFC;
+    padding: 5px;
+    border-radius:5px; 
+    font-weight: 600;
+  }
+
+
+  button:active {
+    
+    background-color:#21b8a1;
+  }
+
+footer {
+  
+  border-top: 1px solid #F92664;
+  width: 99vw;
+  min-height: 300px;
+  background-color: #1D2B34;
+}
+
+
+.avatar {
+  position: relative;
+  float:left;
+}
+
+.avatar img {
+  width:40px;
+  margin: 10px 5px 0px 0px;
+  border-radius: 50px;
+}
+
+@media only screen and  (max-width: 600px) {
+
+      .logo {
+        width: 30vw;
+        display: flex;
+        padding: 10px;
+        font-size: 0.8em;
+        
+        
+      }
+
+      .viajando p, .viajando h2 {
+        margin-top:50px;
+        width: 45vw;
+        margin-left: 50px;
+        font-size: 1.5em;
+        color:#fff;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        margin-top:50px;
+        margin-left: 20px;
+        font-size: 1.5em;
+        box-shadow: inset;
+        line-height: 1.2;
+        color:#FFF;
+      }
+
+      .hero h2 {
+        margin-top:50px;
+        margin-right: 10px;
+        font-size: 1em;
+        box-shadow: inset;
+        line-height: 1.2;
+        color:#FFF;
+        
+      }
+
+      .pontos_turisticos img {
+        width: 85vw;
+      }
+
+      .viajando {
+        height: 200px;
+        align-items: center;
+        min-height: 300px;
+      }
+
+      .viajando p, .viajando h2 {
+        margin-top:50px;
+        width: 85vw;
+        margin-left: 50px;
+        color:#fff;
+        font-size: 1.2em;
+        line-height: 1.2;
+      }
+
+      header {
+         font-size: 0.8em;
+      }
+
+
+      .avatar img {
+        width: 95%;
+        margin-left: 10px;
+      }
+}
+
+.menu li a {
+   color:orange;
+   text-decoration: none;
+   
+}
+
+
+.menu a:hover {
+
+   text-decoration: underline;
+   
+}
