@@ -165,6 +165,22 @@
       }
 
 
+      button {
+        background-color:#388D80;
+        font-size: 20px;
+        width:150px;
+        color:#FCFCFC;
+        padding: 5px;
+        border-radius:5px; 
+        font-weight: 600;
+      }
+
+
+      button:active {
+        
+        background-color:#21b8a1;
+      }
+
     footer {
       
       border-top: 1px solid #F92664;
@@ -174,7 +190,16 @@
     }
 
 
+    .avatar {
+      position: relative;
+      float:left;
+    }
     
+    .avatar img {
+      width:40px;
+      margin: 10px 5px 0px 0px;
+      border-radius: 50px;
+    }
     @media only screen and  (max-width: 600px) {
 
           .logo {
@@ -238,15 +263,33 @@
           }
     }
 
-    </style>
-
+    .menu li a {
+       color:orange;
+       text-decoration: none;
+       
+    }
+    
+   
+    .menu a:hover {
+    
+       text-decoration: underline;
+       
+    }
 
   
+
+    </style>
+
+    
+
+    
+
 
   </head>
   <body>
     <div class="container_central" >
         <header>
+          <nav class="menu">
             <div class="flex_behind">
               <div class="logo">
                 <img src="blog.png" height="30px" />
@@ -254,11 +297,12 @@
               </div>
               <nav>
                 <ul>
-                  <li>Fazer Login</li>
-                  <li>Criar Post</li>
+                  <li><a href="#">Fazer Login</a></li>
+                  <li><a href="#">Criar Post</a></li>
                 </ul>
               </nav>
             </div>
+          </nav>
         </header>
 
         <main>
@@ -296,8 +340,25 @@
                         Praia do Pontal 
                     </figcaption>
                   </figure>
-                  <hr/>   
-                </div>
+                  <hr/>  
+                  <button type="button" onclick="mostrar('avatar')">+ Comentarios</button>
+                  <p  style="padding:10px;display:none;">
+                    <span class="avatar" style="display:none;"><img src="shieldofhero.png"></span> Visitar este lugar foi uma das coisas mais maravilhos que já aconteceram na minha vida, recomendo 
+                  as todos pela experiencia, aqui tirei linda fotos e puder aproveitar o mar e natureza da melhor forma possível</p>
+                  <p  style="padding:10px;display:none;">
+                    <span class="avatar" ><img src="shieldofhero.png"></span> Visitar este lugar foi uma das coisas mais maravilhos que já aconteceram na minha vida, recomendo 
+                  as todos pela experiencia, aqui tirei linda fotos e puder aproveitar o mar e natureza da melhor forma possível</p>
+                  <p  style="padding:10px;display:none;">
+                    <span class="avatar"><img src="shieldofhero.png"></span> Visitar este lugar foi uma das coisas mais maravilhos que já aconteceram na minha vida, recomendo 
+                  as todos pela experiencia, aqui tirei linda fotos e puder aproveitar o mar e natureza da melhor forma possível</p>
+                  <p  style="padding:10px;display:none;">
+                    <span class="avatar"><img src="shieldofhero.png"></span> Visitar este lugar foi uma das coisas mais maravilhos que já aconteceram na minha vida, recomendo 
+                  as todos pela experiencia, aqui tirei linda fotos e puder aproveitar o mar e natureza da melhor forma possível</p>
+                  <p  style="padding:q0px;display:none;">
+                    <span class="avatar"><img src="shieldofhero.png"></span> Visitar este lugar foi uma das coisas mais maravilhos que já aconteceram na minha vida, recomendo 
+                  as todos pela experiencia, aqui tirei linda fotos e puder aproveitar o mar e natureza da melhor forma possível</p>
+                  
+                </div>p
 
                 <div class="pontos_turisticos">
                   <h2>02. Debaixo d’água nas Prainhas do Pontal do Atalaia</h2>
@@ -366,5 +427,19 @@
 
         <footer></footer>
   </div>
+
+  <script>
+     function mostrar(id) {
+        
+      const elems = document.getElementsByClassName(id);
+
+      // loop all collection elements
+      for (let i = 0; i < elems.length; i++) {
+        elems[i].parentElement.style.display = 'block';
+      }
+       
+        
+    }
+  </script>
   </body>
 </html>
