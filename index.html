@@ -358,7 +358,7 @@
                     <span class="avatar"><img src="shieldofhero.png"></span> Visitar este lugar foi uma das coisas mais maravilhos que já aconteceram na minha vida, recomendo 
                   as todos pela experiencia, aqui tirei linda fotos e puder aproveitar o mar e natureza da melhor forma possível</p>
                   
-                </div>p
+                </div>
 
                 <div class="pontos_turisticos">
                   <h2>02. Debaixo d’água nas Prainhas do Pontal do Atalaia</h2>
@@ -435,7 +435,15 @@
 
       // loop all collection elements
       for (let i = 0; i < elems.length; i++) {
-        elems[i].parentElement.style.display = 'block';
+
+        parente = elems[i].parentElement;
+
+        if(parente.style.display == 'none'){
+          parente.style.display = 'block';
+        } else {
+          elems[i].parentElement.style.display = 'none';
+        }
+        
       }
        
         
